@@ -1,4 +1,4 @@
 {
-    "name": "ArchLinux Codespace",
-    "image": "archlinux:base-devel"
+    "name": "Gentoo Codespace",
+    "image": "gentoo/stage3:latest"
 }
