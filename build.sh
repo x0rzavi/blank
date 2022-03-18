@@ -8,6 +8,12 @@ set -e
 # Description: Build xanmod kernel on gentoo
 # Dependencies: 7z, lz4
 
+directory=$(pwd)
+deps_setup () {
+    env USE="-wxwidgets" emerge app-arch/lz4 app-arch/p7zip --noreplace
+    echo -e "\nDependency Setup Completed Successfully\n"
+}
+
 package_setup () {
     emerge sys-kernel/xanmod-sources --noreplace
     eselect kernel set 1
@@ -30,6 +36,13 @@ kernel_build () {
     echo -e "\nKernel Build Completed Successfully\n"
 }
 
+kernel_package () {
+    time 7z a -t7z linux.7z /usr/src/linux-*
+    echo -e "\nKernel Packing Completed Successfully\n"
+}
+
+deps_setup
 package_setup
 kernel_prepare
 kernel_build
+kernel_package
