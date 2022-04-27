@@ -1,4 +1,4 @@
 {
     "name": "ArchLinux Codespace",
-    "image": "archlinux:base-devel"
+    "image": "x0rzavi/arch-dev:latest"
 }
