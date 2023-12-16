@@ -1,0 +1,5 @@
+name: 'Test github action'
+description: 'Test github action'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
