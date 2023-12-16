@@ -6,6 +6,7 @@ jobs:
     name: test gifos
     steps:
       - uses: actions/checkout@v4
+      - uses: x0rzavi/blank@test
       - name: check
         run: |
           ls
